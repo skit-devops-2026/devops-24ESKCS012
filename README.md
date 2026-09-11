@@ -21,3 +21,18 @@ FSD Student Hub is a static web application for students and administrators. It 
 ```bash
 make install
 make run
+
+
+## Testing
+
+Automated tests are available in the `tests/` directory.
+
+The testing guide is available at:
+`docs/testing.md`
+
+Run the automated tests locally with:
+
+```bash
+make test
+
+
