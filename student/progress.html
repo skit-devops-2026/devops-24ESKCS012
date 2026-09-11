@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A holistic view of your academic progress and growth score.">
+  <title>Progress — Student360</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/student.css">
+</head>
+<body>
+  <button class="sidebar-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+  </button>
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Student navigation">
+      <div class="sidebar-header" style="display:flex;align-items:center;justify-content:space-between;">
+        <span><span class="text-gold sidebar-brand-text">Student</span><span class="sidebar-brand-text">360</span></span>
+        <button class="sidebar-collapse-btn" aria-label="Collapse sidebar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7M18 19l-7-7 7-7"/></svg>
+        </button>
+      </div>
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <a href="dashboard.html" class="sidebar-link"><span class="link-label">Dashboard</span></a>
+        <a href="study.html"     class="sidebar-link"><span class="link-label">Study Tracker</span></a>
+        <a href="subjects.html"  class="sidebar-link"><span class="link-label">Subjects</span></a>
+        <a href="notes.html"     class="sidebar-link"><span class="link-label">Notes</span></a>
+        <a href="tasks.html"     class="sidebar-link"><span class="link-label">Tasks</span></a>
+        <a href="goals.html"     class="sidebar-link"><span class="link-label">Goals</span></a>
+        <a href="calendar.html"  class="sidebar-link"><span class="link-label">Calendar</span></a>
+        <a href="progress.html"  class="sidebar-link active"><span class="link-label">Progress</span></a>
+        <a href="analytics.html" class="sidebar-link"><span class="link-label">Analytics</span></a>
+        <a href="reflection.html" class="sidebar-link"><span class="link-label">Self Review</span></a>
+        <a href="ai.html"        class="sidebar-link"><span class="link-label">AI Assistant</span></a>
+        <a href="resources.html" class="sidebar-link"><span class="link-label">Resources</span></a>
+        <a href="announcements.html" class="sidebar-link"><span class="link-label">Announcements</span></a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="profile.html"  class="sidebar-link"><span class="link-label">Settings / Profile</span></a>
+        <a href="../index.html" class="sidebar-link text-faint"><span class="link-label">Logout</span></a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="dashboard-header">
+        <div>
+          <h1 class="dashboard-title">Your Progress</h1>
+          <p class="dashboard-subtitle">A holistic view of your academic growth.</p>
+        </div>
+      </header>
+
+      <!-- Main Growth Score Banner -->
+      <div class="dashboard-panel" style="display: flex; align-items: center; justify-content: space-between; padding: 3rem; background: linear-gradient(135deg, var(--ink), var(--ink-soft)); color: var(--paper-raised); border: none; flex-wrap: wrap; gap: 2rem;">
+        <div>
+          <h2 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; border-bottom: none; padding-bottom: 0;">Current Growth Score</h2>
+          <p style="color: var(--paper); max-width: 60ch; font-size: 0.875rem;">Your score is calculated based on study consistency, goal completion, subject progress, and daily self-reflection. Keep up the good work!</p>
+        </div>
+        <div style="text-align: right;">
+          <div class="tabular-nums" style="font-family: var(--font-serif); font-size: 4rem; line-height: 1; color: var(--gold);" data-target="84">0</div>
+          <div style="margin-top: 0.75rem;"><span class="growth-delta up">&uarr; +4 from last month</span></div>
+        </div>
+      </div>
+
+      <!-- Key Metrics -->
+      <h2 class="section-title mt-8 mb-4" style="font-family: var(--font-serif); font-size: 1.25rem;">Key Metrics (All Time)</h2>
+      <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+        <div class="stat-card">
+          <span class="stat-label">Study Hours</span>
+          <span class="stat-value tabular-nums" data-target="142">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Topics Completed</span>
+          <span class="stat-value tabular-nums" data-target="24">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Questions Solved</span>
+          <span class="stat-value tabular-nums" data-target="512">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Goals Completed</span>
+          <span class="stat-value tabular-nums"><span data-target="7">0</span><span class="text-faint" style="font-size:1rem;">/10</span></span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Consistency</span>
+          <span class="stat-value tabular-nums"><span data-target="88">0</span><span class="text-faint" style="font-size:1rem;">%</span></span>
+        </div>
+      </div>
+
+      <div class="dashboard-grid mt-8">
+        <div class="dashboard-main">
+          <div class="dashboard-panel">
+            <h2 class="panel-title">Score Breakdown</h2>
+            
+            <div class="progress-item">
+              <div class="progress-header">
+                <span>Study Consistency (20%)</span>
+                <span class="tabular-nums">18/20</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-pct="90"></div></div>
+            </div>
+            
+            <div class="progress-item mt-4">
+              <div class="progress-header">
+                <span>Goal Completion (20%)</span>
+                <span class="tabular-nums">14/20</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-pct="70"></div></div>
+            </div>
+
+            <div class="progress-item mt-4">
+              <div class="progress-header">
+                <span>Topic Progress (20%)</span>
+                <span class="tabular-nums">16/20</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-pct="80"></div></div>
+            </div>
+
+            <div class="progress-item mt-4">
+              <div class="progress-header">
+                <span>Practice (15%)</span>
+                <span class="tabular-nums">12/15</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-pct="80"></div></div>
+            </div>
+
+            <div class="progress-item mt-4">
+              <div class="progress-header">
+                <span>Revision (10%)</span>
+                <span class="tabular-nums">8/10</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-pct="80"></div></div>
+            </div>
+            
+            <div class="progress-item mt-4">
+              <div class="progress-header">
+                <span>Task Completion (10%)</span>
+                <span class="tabular-nums">9/10</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-pct="90"></div></div>
+            </div>
+
+            <div class="progress-item mt-4" style="margin-bottom: 0;">
+              <div class="progress-header">
+                <span>Self Reflection (5%)</span>
+                <span class="tabular-nums">5/5</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-pct="100" style="background-color: var(--green);"></div></div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="dashboard-side">
+          <div class="dashboard-panel ai-insight">
+            <h2 class="panel-title" style="color:var(--gold-ink); border-bottom-color:var(--gold-border);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              Growth Analysis
+            </h2>
+            <p class="ai-insight-text">Your strongest area is <strong>Study Consistency</strong> and <strong>Self Reflection</strong>. The biggest opportunity to increase your Growth Score this week is to complete your pending milestones under <strong>Goal Completion</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Trigger count-ups for numbers
+      document.querySelectorAll('[data-target]').forEach(el => {
+        S360.countUp(el, parseInt(el.dataset.target), 1000);
+      });
+    });
+  </script>
+</body>
+</html>
