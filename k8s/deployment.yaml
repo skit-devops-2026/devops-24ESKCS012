@@ -1,0 +1,20 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-hub
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student-hub
+  template:
+    metadata:
+      labels:
+        app: student-hub
+    spec:
+      containers:
+        - name: student-hub
+          image: abhijeetsingh69/student-hub:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
